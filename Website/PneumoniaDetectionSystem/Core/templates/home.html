@@ -1,0 +1,79 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulmo - Pneumonia Detection System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="{% static 'images/img9.png' %}" alt="Pulmo Logo">
+        <span>Pulmo</span>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">FAQs</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="body-container">
+
+    <div class="left-section">
+        <h1>Pneumonia<br> Detection <br>System</h1>
+        <p class="description">Introducing our cutting-edge pneumonia <br> detection system, designed to revolutionize <br> early diagnosis and improve patient outcomes.</p>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="imageInput" class="upload-area">
+                <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                <span>Drag & Drop to Upload File<br> OR<br> Click to Upload File</span>
+                <input type="file" id="imageInput" name="image">
+            </label>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <div class="right-section">
+        <img src="{% static 'images/img5.jpg' %}" alt="Description of the image">
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="copyright">
+            <p>© 2024 Pneumonia Detection. All rights reserved.</p>
+        </div>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#privacy">Privacy</a></li>
+                <li><a href="#terms">Terms</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+
+<script>
+    document.getElementById('imageInput').addEventListener('change', function() {
+        var fileName = this.files[0].name;
+        var uploadAreaText = document.querySelector('.upload-area span');
+        uploadAreaText.textContent = fileName;
+    });
+
+    
+</script>
+</body>
+
+</html>
+

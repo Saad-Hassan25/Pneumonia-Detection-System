@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Animation</title>
+  <link rel="stylesheet" href="{% static 'result.css' %}">
+</head>
+<body>
+  <div class="container">
+    <div class="checking-message">
+      <h1>Checking for Pneumonia...</h1>
+    </div>
+    <div class="loading-container">
+      <div class="loading-bar"></div>
+    </div>
+  </div>
+
+  <div class="content hidden">
+    <!-- Your page content goes here -->
+    <div class="result-section">
+        <h2>Result</h2>
+        <p id="result-statement">{{ prediction_result }}</p>
+      </div>
+    
+      <div class="disclaimer-section">
+        <h3>Disclaimer</h3>
+        <p class="disclaimer">While our pneumonia detection system utilizes advanced artificial intelligence to analyze medical images and provide insights, it's important to note that it may not be 100% accurate. Medical diagnoses, especially those based on imaging, often require human expertise and clinical judgment. If you are experiencing symptoms such as cough, fever, and difficulty breathing, or if you are concerned about your health in any way, we strongly advise consulting a qualified healthcare provider.</p>
+      </div>
+    </div>
+    
+
+  <div class="facts">
+    <h2>Interesting Facts About Lungs</h2>
+    <ul>
+      <li>The lungs are the only organs in the human body that can float on water.</li>
+      <li>An average person breathes in about 11,000 liters of air every day.</li>
+      <li>The surface area of the lungs is roughly the same size as a tennis court.</li>
+      <li>The left lung is smaller than the right lung to accommodate the heart.</li>
+    </ul>
+  </div>
+
+  <div class="suggestions">
+    <h2>Tips for Healthy Lungs</h2>
+    <ol>
+      <li>Avoid smoking and exposure to secondhand smoke.</li>
+      <li>Exercise regularly to improve lung function.</li>
+      <li>Maintain a healthy diet rich in fruits and vegetables.</li>
+      <li>Avoid exposure to air pollutants and toxins.</li>
+      <li>Practice deep breathing exercises to strengthen the lungs.</li>
+    </ol>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Simulate loading delay
+      setTimeout(function() {
+        // Hide checking message and loading animation
+        document.querySelector('.checking-message').style.display = 'none';
+        document.querySelector('.loading-container').style.display = 'none';
+        document.querySelector('.facts').style.display = 'none';
+        document.querySelector('.suggestions').style.display = 'none';
+        // Show content
+        document.querySelector('.content').classList.remove('hidden');
+      }, 5500); // Change the delay time (in milliseconds) as needed
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+
+
+body, ul 
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'verdana'; 
+}
+
+header 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0; /* adjust the background color */
+    padding: 10px 20px;
+}
+
+.logo 
+{
+    display: flex;
+    align-items: center;
+}
+
+.logo img 
+{
+    width: 40px; /* adjust the width of the logo image */
+    height: auto;
+    margin-right: 10px; /*  space between the logo image and the text */
+}
+
+.logo span 
+{
+    font-size: 24px; /*  font size of the text */
+}
+
+nav ul 
+{
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li 
+{
+    margin-right: 20px; /* space between navigation items */
+}
+
+nav ul li a 
+{
+    text-decoration: none;
+    color: #333; /* Adjust the color of the links */
+    font-weight: bold;
+    font-size: 16px; /* Adjust the font size of the links */
+}
+
+nav ul li a:hover 
+{
+    color: #007bff; /* Change the color on hover as per your design */
+}
+
+footer 
+{
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.footer-nav ul 
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-nav ul li 
+{
+    margin: 0 10px;
+}
+
+.footer-nav ul li a 
+{
+    text-decoration: none;
+    transition: color 0.3s;
+    color: #333; /* Adjust the color of the links */
+}
+
+.footer-nav ul li a:hover 
+{
+    color: #007bff; /* Change the color on hover as per your design */
+}
+
+
+.body-container 
+{
+    display: flex;
+    padding-left: 100px;
+}
+
+.left-section 
+{
+    flex: 1;
+    padding-right: 20px;
+}
+
+.right-section 
+{
+    flex: 1;
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-section img {
+    max-width: 100%; /* width of the image to fit its container */
+    max-height: 100%; /* height of the image to fit its container */
+    margin-top: 20px; /*  margin to move the image up */
+    margin-left: -150px; /*  margin to move the image towards the left */
+
+}
+
+.description 
+{
+    margin-bottom: 30px;
+}
+
+h1 
+{
+    margin-top: 60px;
+    font-size: 65px;   /* font size of the heading */
+    margin-bottom: 15px;  
+}
+
+.upload-area 
+{
+    border: 2px groove #333;
+    height: 100px;
+    width: 300px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.upload-area span 
+{
+    font-size: 15px;
+    color: #333;
+    margin: 5px 0;
+    text-align: center; /* Add this line to align the text to center */
+}
+
+#imageInput {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background: #578bc4;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 125px;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #000000;
+}
