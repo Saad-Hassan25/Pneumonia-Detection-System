@@ -1,117 +1,210 @@
 
-body {
-    font-family: Arial, sans-serif;
+body, ul 
+{
     margin: 0;
     padding: 0;
-  }
+    font-family: 'verdana'; 
+}
+
+header 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0; /* adjust the background color */
+    padding: 10px 20px;
+}
+
+.logo 
+{
+    display: flex;
+    align-items: center;
+}
+
+.logo img 
+{
+    width: 40px; /* adjust the width of the logo image */
+    height: auto;
+    margin-right: 10px; /*  space between the logo image and the text */
+}
+
+.logo span 
+{
+    font-size: 24px; /*  font size of the text */
+}
+
+nav ul 
+{
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li 
+{
+    margin-right: 20px; /* space between navigation items */
+}
+
+nav ul li a 
+{
+    text-decoration: none;
+    color: #333; /* Adjust the color of the links */
+    font-weight: bold;
+    font-size: 16px; /* Adjust the font size of the links */
+}
+
+nav ul li a:hover 
+{
+    color: #007bff; /* Change the color on hover as per your design */
+}
+
+footer 
+{
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.footer-nav ul 
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-nav ul li 
+{
+    margin: 0 10px;
+}
+
+.footer-nav ul li a 
+{
+    text-decoration: none;
+    transition: color 0.3s;
+    color: #333; /* Adjust the color of the links */
+}
+
+.footer-nav ul li a:hover 
+{
+    color: #007bff; /* Change the color on hover as per your design */
+}
+
 
 
 
 .checking-message {
-    text-align: center;
-    position: relative;
-    top: 20px; /* Adjust position as needed */
-    padding-bottom: 20px;
-  }
-  
-  .loading-container {
-    background-color: #f0f0f0;
-    height: 10px;
-    width: 70%; /* Adjust the width as needed */
-    margin: auto; /* Center loading bar horizontally */
-    position: relative;
-  }
-  
-  .loading-bar {
-    background-color: #007bff;
-    height: 100%;
+  text-align: center;
+  position: relative;
+  top: 20px; /* Adjust position as needed */
+  padding-bottom: 20px;
+}
+
+.loading-container {
+  background-color: #f0f0f0;
+  height: 10px;
+  width: 70%; /* Adjust the width as needed */
+  margin: auto; /* Center loading bar horizontally */
+  position: relative;
+}
+
+.loading-bar {
+  background-color: #007bff;
+  height: 100%;
+  width: 0;
+  animation: progress 5s ease-in-out forwards; /* Adjust the duration (5s) as needed */
+}
+
+@keyframes progress {
+  0% {
     width: 0;
-    animation: progress 5s ease-in-out forwards; /* Adjust the duration (5s) as needed */
   }
-  
-  @keyframes progress {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 100%;
-    }
+  100% {
+    width: 100%;
   }
+}
+
+
   
-  .content {
-    position: absolute;
-    top: 50%;
-    left: 30px;
-    transform: translateY(-50%);
-    text-align: left;
+.facts, .suggestions {
+  text-align: center;
+  margin: 50px auto; /* Adjust spacing as needed */
+  width: 70%; /* Adjust width as needed */
+}
+
+.facts h2, .suggestions h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.facts ul, .suggestions ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+.facts ul li, .suggestions ol li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.content.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.content.visible {
+  opacity: 1;
+}
+
+#container1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#result-statement {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center; /* or right if you prefer */
+  margin-right: 20px; /* Adjust if needed */
+
+}
+
+#gif-container {
+  flex: 1;
+  text-align: center;
+  margin-top: 30px;
+  
+}
+#gif-container img {
+  width: 200px; /* Adjust width as needed */
+  height: 150px; /* Adjust height as needed */
+}
+
+.container1 h2 {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-bottom: 10px; /* Adjust the spacing as needed */
+    text-align: center; /* Center the heading */
+
   }
-  
-  
-  .facts, .suggestions {
-    text-align: center;
-    margin: 50px auto; /* Adjust spacing as needed */
-    width: 70%; /* Adjust width as needed */
-  }
-  
-  .facts h2, .suggestions h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .facts ul, .suggestions ol {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .facts ul li, .suggestions ol li {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .content.hidden {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .content.visible {
-    opacity: 1;
-  }
-  
-  .result-section {
-    margin-top: 50px;
-    margin-right: 30px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-  }
-  
-  .result-section h2 {
-    font-size: 24px;
-    text-align: center;
-  }
-  
-  .result-section #result-statement {
-    font-size: 18px;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .disclaimer-section {
-    margin-top: 70px;
-    margin-right: 30px;
-  }
-  
-  .disclaimer-section h3 {
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .disclaimer {
-    font-size: 14px;
-    text-align: center;
-    color: #777;
-  }
-  
+
+
+#disclaimer {
+  text-align: center;
+  margin-top: 50px; /* Adjust as needed */
+  color: #777;
+}
+

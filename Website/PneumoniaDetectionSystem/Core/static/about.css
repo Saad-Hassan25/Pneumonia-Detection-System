@@ -1,0 +1,139 @@
+
+body, ul 
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'verdana'; 
+}
+
+header 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0; /* adjust the background color */
+    padding: 10px 20px;
+}
+
+.logo 
+{
+    display: flex;
+    align-items: center;
+}
+
+.logo img 
+{
+    width: 40px; /* adjust the width of the logo image */
+    height: auto;
+    margin-right: 10px; /*  space between the logo image and the text */
+}
+
+.logo span 
+{
+    font-size: 24px; /*  font size of the text */
+}
+
+nav ul 
+{
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li 
+{
+    margin-right: 20px; /* space between navigation items */
+}
+
+nav ul li a 
+{
+    text-decoration: none;
+    color: #333; /* Adjust the color of the links */
+    font-weight: bold;
+    font-size: 16px; /* Adjust the font size of the links */
+}
+
+nav ul li a:hover 
+{
+    color: #007bff; /* Change the color on hover as per your design */
+}
+
+footer 
+{
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.footer-nav ul 
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-nav ul li 
+{
+    margin: 0 10px;
+}
+
+.footer-nav ul li a 
+{
+    text-decoration: none;
+    transition: color 0.3s;
+    color: #333; /* Adjust the color of the links */
+}
+
+.footer-nav ul li a:hover 
+{
+    color: #007bff; /* Change the color on hover as per your design */
+}
+
+
+
+main {
+    padding: 20px;
+}
+
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content {
+    margin-bottom: 20px;
+}
+
+.about-content h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    font-size: 16px;
+    color: #666;
+}
+
+.about-image {
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}

@@ -14,7 +14,7 @@ def homePage(request):
                 for chunk in uploaded_image.chunks():
                     f.write(chunk)
 
-            model_path = 'F:/Website/Website/PneumoniaDetectionSystem/CNN.h5' #path of the model
+            model_path = 'F:/PDS Rep/Pneumonia-Detection-System/Website/PneumoniaDetectionSystem/CNN.h5' #path of the model
             loaded_model = load_trained_model(model_path)
             predicted_class, predictions = predict_image_class(loaded_model, image_path)
 
@@ -29,15 +29,40 @@ def homePage(request):
             # Print the predicted class
             if predicted_class == 0:
                 prediction_result = "You are normal."
+                hasPneumonia = False
             else:
                 prediction_result = "You have Pneumonia"
+                hasPneumonia = True
 
-            return render(request, 'result.html', {'prediction_result': prediction_result})
+            return render(request, 'result.html', {'prediction_result': prediction_result, 'hasPneumonia' : hasPneumonia})
         else:
             return HttpResponse('No image uploaded!')
     return render(request, 'home.html')
 
 def result(request):
     return render(request, 'result.html')
+
+
+def about(request):
+    return render(request, 'about.html')
+    
+
+def faqs(request):
+    return render(request, 'faqs.html')
+    
+    
+def privacy(request):
+    return render(request, 'privacy.html')
+    
+    
+def contact(request):
+    return render(request, 'contact.html')
+    
+    
+def terms(request):
+    return render(request, 'terms.html')
+    
+    
+    
 
 

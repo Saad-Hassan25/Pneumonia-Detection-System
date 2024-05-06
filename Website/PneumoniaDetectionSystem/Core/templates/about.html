@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Pulmo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="{% static 'images/img9.png' %}" alt="Pulmo Logo">
+        <span>Pulmo</span>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="about-us">About</a></li>
+            <li><a href="faqs">FAQs</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="about-section">
+        <div class="about-content">
+            <h1>About Pulmo</h1>
+            <p>Welcome to Pulmo, where cutting-edge technology meets healthcare innovation. Pulmo is dedicated to revolutionizing pneumonia detection through advanced AI algorithms and machine learning.</p>
+            <p>Our mission is to provide healthcare professionals with a powerful tool that enhances diagnostic accuracy, improves patient outcomes, and ultimately saves lives.</p>
+            <p>At Pulmo, we believe in the power of collaboration. Our team consists of experts in medicine, data science, and technology, working together to develop solutions that make a real difference in patient care.</p>
+            <p>Join us on our journey to redefine pneumonia detection and transform the future of healthcare.</p>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="copyright">
+            <p>© 2024 Pulmo. All rights reserved.</p>
+        </div>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="privacy">Privacy</a></li>
+                <li><a href="terms-and-conditions">Terms</a></li>
+                <li><a href="contact-us">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+</body>
+</html>

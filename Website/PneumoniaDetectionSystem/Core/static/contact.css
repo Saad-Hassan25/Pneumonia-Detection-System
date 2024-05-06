@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+body, ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'verdana'; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0; /* adjust the background color */
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px; /* adjust the width of the logo image */
+    height: auto;
+    margin-right: 10px; /*  space between the logo image and the text */
+}
+
+.logo span {
+    font-size: 24px; /*  font size of the text */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px; /* space between navigation items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* Adjust the color of the links */
+    font-weight: bold;
+    font-size: 16px; /* Adjust the font size of the links */
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Change the color on hover as per your design */
+}
+
+footer {
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-nav ul li {
+    margin: 0 10px;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    transition: color 0.3s;
+    color: #333; /* Adjust the color of the links */
+}
+
+.footer-nav ul li a:hover {
+    color: #007bff; /* Change the color on hover as per your design */
+}
+
+.contact-container {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 90px); /* Subtract header and footer height */
+    overflow: hidden; /* Hide overflow */
+ 
+
+.left-col {
+    width: 50%;
+    height: 70%;
+    background-image: url('images/img5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+.right-col {
+    background: #FCFDFD;
+    width: 50%;
+    height: 100%;
+    padding: 5rem 3.5rem;
+    margin-right: 10px;
+    overflow: hidden; /* Hide overflow */
+    margin-top: 150px;
+}
+}
+
+h1, label, button, .description {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+
+h1 {
+    color: #3F444C;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+    font-weight: 300;
+}
+
+p {
+    color: #818386;
+    font-size: 0.9rem;
+    letter-spacing: 0.01rem;
+    width: 40vw;
+    margin: 0.25rem 0;
+}
+
+label, .description {
+    color: #818386;
+    text-transform: uppercase;
+    font-size: 0.625rem;
+}
+
+form {
+    width: 31.25rem;
+    position: relative;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+
+input, textarea, label {
+    width: 40vw;
+    display: block;
+}
+
+p, placeholder, input, textarea {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #010712;
+}
+
+input, textarea {
+    color: #010712;
+    font-weight: 500;
+    background: #FCFDFD;
+    border: none;
+    border-bottom: 1px solid #818386;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    text-transform: uppercase;
+    font-weight: 300;
+    background: #3B3636;
+    color: #FCFDFD;
+    width: 10rem;
+    height: 2.25rem;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}
+
+input:hover, textarea:hover, button:hover {
+    opacity: 0.5;
+}
+
+button:active {
+    opacity: 0.8;
+}
