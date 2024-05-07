@@ -101,7 +101,7 @@ footer {
 
 .left-col {
     width: 50%;
-    height: 70%;
+    height: 80%;
     background-image: url('images/img5.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -116,7 +116,7 @@ footer {
     padding: 5rem 3.5rem;
     margin-right: 10px;
     overflow: hidden; /* Hide overflow */
-    margin-top: 150px;
+    margin-top: 25px;
 }
 }
 

@@ -1,6 +1,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from .models import UploadImage
+from django.core.mail import send_mail
+from django.http import JsonResponse
+
 from .utils import load_trained_model, preprocess_image, predict_image_class
 
 # Create your views here.
@@ -14,7 +17,7 @@ def homePage(request):
                 for chunk in uploaded_image.chunks():
                     f.write(chunk)
 
-            model_path = 'F:/PDS Rep/Pneumonia-Detection-System/Website/PneumoniaDetectionSystem/CNN.h5' #path of the model
+            model_path = 'D:/LABS/AI/PDS Rep/Pneumonia-Detection-System/Website/PneumoniaDetectionSystem/CNN.h5' #path of the model
             loaded_model = load_trained_model(model_path)
             predicted_class, predictions = predict_image_class(loaded_model, image_path)
 
@@ -62,6 +65,26 @@ def contact(request):
 def terms(request):
     return render(request, 'terms.html')
     
+    
+def contact_submit(request):
+    if request.method == 'POST':
+        name = request.POST.get('name', '')
+        email = request.POST.get('email', '')
+        message = request.POST.get('message', '')
+
+        # Send email
+        send_mail(
+            'Contact Form Submission',
+            f'Name: {name}\nEmail: {email}\nMessage: {message}',
+            email,  # Replace with your email address
+            ['l215252@lhr.nu.edu.pk'],  # Replace with recipient email address
+            fail_silently=False,
+        )
+
+        return JsonResponse({'success': True})
+    else:
+        return JsonResponse({'success': False})
+
     
     
 

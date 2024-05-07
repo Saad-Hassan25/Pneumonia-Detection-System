@@ -143,3 +143,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/D:/LABS/AI/AI Project/Website/PneumoniaDetectionSystem/Uploads/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'D:/LABS/AI/AI Project/Website/PneumoniaDetectionSystem/Uploads')
+
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'l215252@lhr.nu.edu.pk'  # Your Gmail email address
+EMAIL_HOST_PASSWORD = 'Saad2592003'  # Your Gmail password or app-specific password
+DEFAULT_FROM_EMAIL = 'l215252@lhr.nu.edu.pk'  # Same as EMAIL_HOST_USER

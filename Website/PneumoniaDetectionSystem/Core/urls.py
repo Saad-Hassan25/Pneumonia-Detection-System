@@ -8,7 +8,8 @@ urlpatterns = [
     path('faqs/', faqs, name='faqs'),
     path('privacy/', privacy, name='privacy'),
     path('contact-us/', contact, name='contact'),
-    path('terms-and-conditions/', terms, name='terms')
+    path('terms-and-conditions/', terms, name='terms'),
+    path('contact-submit/', contact_submit, name='contact_submit')
 
     
     # Other URL patterns for the core app
