@@ -31,7 +31,7 @@ def homePage(request):
 
             # Print the predicted class
             if predicted_class == 0:
-                prediction_result = "You are normal."
+                prediction_result = "You do not have pneumonia."
                 hasPneumonia = False
             else:
                 prediction_result = "You have Pneumonia"

@@ -61,8 +61,7 @@ footer
 {
     background-color: #f0f0f0;
     padding: 10px 0;
-    position: fixed;
-    bottom: 0;
+    position: absolute;
     width: 100%;
 }
 
@@ -100,4 +99,37 @@ footer
 .footer-nav ul li a:hover 
 {
     color: #007bff; /* Change the color on hover as per your design */
+}
+
+
+.terms-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.terms-content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.terms-content h2 {
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.terms-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.terms-content ul {
+    margin-bottom: 15px;
+}
+
+.terms-content ul li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 5px;
 }

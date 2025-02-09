@@ -1,0 +1,223 @@
+
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  &::before, &::after {
+    box-sizing: border-box;
+  }
+}
+
+.container {
+    margin: 0 auto;
+    padding: 4rem;
+    width: 48rem;
+  }
+  
+  .accordion {
+    .accordion-item {
+      border-bottom: 1px solid #ccc; /* Replace with your light gray color */
+      button[aria-expanded='true'] {
+        border-bottom: 1px solid #00f; /* Replace with your blue color */
+      }
+    }
+    
+    button {
+      position: relative;
+      display: block;
+      text-align: left;
+      width: 100%;
+      padding: 1rem 0;
+      color: #000; /* Replace with your text color */
+      font-size: 1.15rem;
+      font-weight: 400;
+      border: none;
+      background: none;
+      outline: none;
+      
+      &:hover, &:focus {
+        cursor: pointer;
+        color: #00f; /* Replace with your blue color */
+        &::after {
+          cursor: pointer;
+          color: #00f; /* Replace with your blue color */
+          border: 1px solid #00f; /* Replace with your blue color */
+        }
+      }
+      
+      .accordion-title {
+        padding: 1rem 1.5rem 1rem 0;
+      }
+      
+      .icon {
+        display: inline-block;
+        position: absolute;
+        top: 18px;
+        right: 0;
+        width: 22px;
+        height: 22px;
+        border: 1px solid;
+        border-radius: 22px;
+        
+        &::before {
+          display: block;
+          position: absolute;
+          content: '';
+          top: 9px;
+          left: 5px;
+          width: 10px;
+          height: 2px;
+          background: currentColor;
+        }
+        
+        &::after {
+          display: block;
+          position: absolute;
+          content: '';
+          top: 5px;
+          left: 9px;
+          width: 2px;
+          height: 10px;
+          background: currentColor;
+        }
+      }
+    }
+    
+    button[aria-expanded='true'] {
+      color: #00f; /* Replace with your blue color */
+      .icon {
+        &::after {
+          width: 0;
+        }
+      }
+      
+      + .accordion-content {
+        opacity: 1;
+        max-height: 9em;
+        transition: all 200ms linear;
+        will-change: opacity, max-height;
+      }
+    }
+    
+    .accordion-content {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 200ms linear, max-height 200ms linear;
+      will-change: opacity, max-height;
+      
+      p {
+        font-size: 1rem;
+        font-weight: 300;
+        margin: 2em 0;
+      }
+    }
+  }
+
+
+  
+body, ul 
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'verdana'; 
+}
+
+header 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0; /* adjust the background color */
+    padding: 10px 20px;
+}
+
+.logo 
+{
+    display: flex;
+    align-items: center;
+}
+
+.logo img 
+{
+    width: 40px; /* adjust the width of the logo image */
+    height: auto;
+    margin-right: 10px; /*  space between the logo image and the text */
+}
+
+.logo span 
+{
+    font-size: 24px; /*  font size of the text */
+}
+
+nav ul 
+{
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li 
+{
+    margin-right: 20px; /* space between navigation items */
+}
+
+nav ul li a 
+{
+    text-decoration: none;
+    color: #333; /* Adjust the color of the links */
+    font-weight: bold;
+    font-size: 16px; /* Adjust the font size of the links */
+}
+
+nav ul li a:hover 
+{
+    color: #007bff; /* Change the color on hover as per your design */
+}
+
+footer 
+{
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+}
+
+.footer-container 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.footer-nav ul 
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-nav ul li 
+{
+    margin: 0 10px;
+}
+
+.footer-nav ul li a 
+{
+    text-decoration: none;
+    transition: color 0.3s;
+    color: #333; /* Adjust the color of the links */
+}
+
+.footer-nav ul li a:hover 
+{
+    color: #007bff; /* Change the color on hover as per your design */
+}
+
+
+

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-9(@$^=$n7ikr+4qgef0pg6&vk9%65d!0aa)40_^#bldr-4d0)*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['SaadHassan.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -126,7 +126,6 @@ STATICFILES_FINDERS = [
 ]
 
 
-STATIC_URL = 'static/'
 
 
 STATIC_URL = 'static/'
@@ -135,15 +134,18 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'Core', 'static')
 
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-MEDIA_URL = '/D:/LABS/AI/AI Project/Website/PneumoniaDetectionSystem/Uploads/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'D:/LABS/AI/AI Project/Website/PneumoniaDetectionSystem/Uploads')
+MEDIA_URL = '/media/'  # This should be a relative path
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'Uploads')  # Store media inside your project folder
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
