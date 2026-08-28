@@ -1,3 +1,17 @@
+<!-- Project cover -->
+<p align="center">
+  <img src="./project-cover.svg" alt="Pneumonia Detection System cover" width="100%" />
+</p>
+
+> **Deep learning / CNN** — A chest X-ray classification project that applies convolutional neural networks to pneumonia detection.
+
+## Project snapshot
+
+- Model artifacts and a website component are included in the repository.
+- Includes a root-level <a href="./project-cover.svg">project-cover.svg</a>, a scalable project cover graphic for this repository.
+
+---
+
 # Pneumonia Detection using Convolutional Neural Networks
 
 ## Overview:
